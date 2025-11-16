@@ -5,6 +5,7 @@ import FireParticles from './components/fire'
 import Rippling from './components/rippling'
 import Waves from './components/waves'
 import BouncyButton from './components/bouncy-button'
+import Home from './pages/home'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="components/cordyceps" element={<Cordyceps />} />
           <Route path="components/fire" element={<FireParticles />} />
           <Route path="components/rippling" element={<Rippling />} />

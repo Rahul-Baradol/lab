@@ -62,7 +62,7 @@ class LeftParticle {
     green: number;
     blue: number;
 
-    constructor(canvas: HTMLCanvasElement, CENTER_X: number, CENTER_Y: number) {
+    constructor(canvas: HTMLCanvasElement, CENTER_Y: number) {
         const margin = 80;
         this.x = Math.random() * margin;
         this.y = canvas.height - Math.random() * margin;
@@ -123,7 +123,7 @@ const FireParticles = () => {
             function spawnParticle() {
                 if (particles.current.length < 10) {
                     particles.current.push(new RightParticle(canvas!, CENTER_X, CENTER_Y));
-                    particles.current.push(new LeftParticle(canvas!, CENTER_X, CENTER_Y));
+                    particles.current.push(new LeftParticle(canvas!, CENTER_Y));
                 }
             }
 

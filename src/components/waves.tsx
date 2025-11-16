@@ -17,7 +17,7 @@ class Particle {
     amplitude: number;
     frequency: number;
 
-    constructor(canvas: HTMLCanvasElement, CENTER_X: number, CENTER_Y: number) {
+    constructor(canvas: HTMLCanvasElement, CENTER_Y: number) {
         const margin = 800;
         this.x = 0;
         this.y = canvas.height - Math.random() * margin;
@@ -76,12 +76,11 @@ const Waves = () => {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
 
-            const CENTER_X = canvas.width / 2;
             const CENTER_Y = canvas.height / 2;
 
             function spawnParticle() {
                 if (particles.current.length < 7) {
-                    particles.current.push(new Particle(canvas!, CENTER_X, CENTER_Y));
+                    particles.current.push(new Particle(canvas!, CENTER_Y));
                 }
             }
 

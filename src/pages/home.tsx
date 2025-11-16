@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   const items = [
+    { title: "Frosted Glass", route: "/components/frosted-glass" },
     { title: "Cordyceps", route: "/components/cordyceps" },
     { title: "Fire", route: "/components/fire" },
     { title: "Rippling", route: "/components/rippling" },

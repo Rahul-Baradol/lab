@@ -6,6 +6,7 @@ import Rippling from './components/rippling'
 import Waves from './components/waves'
 import BouncyButton from './components/bouncy-button'
 import Home from './pages/home'
+import FrostedGlass from './components/frosted-glass'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/components/rippling" element={<Rippling />} />
           <Route path="/components/waves" element={<Waves />} />
           <Route path="/components/bouncy-button" element={<BouncyButton />} />
+          <Route path="/components/frosted-glass" element={<FrostedGlass />} />
         </Routes>
       </BrowserRouter>
     </>

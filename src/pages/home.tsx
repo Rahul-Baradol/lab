@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   const items = [
     { title: "Cordyceps", route: "/components/cordyceps" },
@@ -15,9 +17,9 @@ export default function Home() {
 
       <div className="flex flex-col gap-5 w-[80vw] h-fit">
         {items.map((item) => (
-          <a
+          <Link
             key={item.route}
-            href={item.route}
+            to={item.route}
             className="group block rounded-2xl border border-neutral-800 hover:border-purple-500 transition-all duration-300 bg-neutral-900/40 backdrop-blur-md shadow-xl hover:shadow-purple-500/20 p-[30px]"
           >
             <div className="text-2xl font-semibold mb-3 group-hover:text-purple-400 transition-all">
@@ -26,7 +28,7 @@ export default function Home() {
             <p className="text-neutral-400 text-sm group-hover:text-neutral-300 transition-all">
               View component →
             </p>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

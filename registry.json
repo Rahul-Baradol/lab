@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "lab@rahulbaradol",
+  "homepage": "https://lab.rahulbaradol.in/",
+  "items": [
+    {
+      "name": "breadcrumb-navigator",
+      "type": "registry:block",
+      "title": "Breadcrumb Navigator",
+      "description": "A simple breadcrumb navigator component, with query param support.",
+      "registryDependencies": [
+        "button",
+        "@acme/input-form",
+        "https://example.com/r/foo"
+      ],
+      "dependencies": ["is-even@3.0.0", "motion"],
+      "files": [
+        {
+          "path": "registry/new-york/hello-world/hello-world.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}

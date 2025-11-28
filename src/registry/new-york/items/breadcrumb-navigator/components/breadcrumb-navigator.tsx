@@ -5,9 +5,10 @@ interface BreadcrumbNavigatorProps {
     pathOrder: string[];
     pathToDisplay: { [key: string]: string };
     pathNormalizer?: (path: string) => string;
+    displayTextClassName?: string;
 }
 
-export function BreadcrumbNavigator({ pathOrder = [], pathToDisplay = {}, pathNormalizer }: BreadcrumbNavigatorProps) {
+export function BreadcrumbNavigator({ pathOrder = [], pathToDisplay = {}, pathNormalizer, displayTextClassName }: BreadcrumbNavigatorProps) {
     const [searchParams] = useSearchParams();
 
     const navigate = useNavigate();
@@ -64,7 +65,7 @@ export function BreadcrumbNavigator({ pathOrder = [], pathToDisplay = {}, pathNo
                                         navigate(`${path}${queryParams ? `?${queryParams}` : ''}`);
                                     }
                                 }}
-                                className="text-orange-500 hover:text-orange-700 font-medium"
+                                className={displayTextClassName ? displayTextClassName : "text-black font-medium"}
                             >
                                 {pathToDisplay[path]}
                             </button>
